@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Business Intelligence Consulting Projects" />
+    <meta name="description" content="Portfolio - ETL, Automation, AI, Web Applications, and Data Engineering Projects" />
     <meta name="author" content="Skotte Analytics" />
     <title>Projects - Skotte Analytics</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -34,44 +34,225 @@
         <div class="container px-5">
             <div class="text-center mb-5">
                 <h1 class="display-5 fw-bolder"><span class="text-gradient d-inline">Projects</span></h1>
-                <p class="lead fw-light text-muted">A selection of our recent BI, analytics, and automation projects.</p>
+                <p class="lead fw-light text-muted">A selection of our recent data engineering, automation, and web application projects.</p>
             </div>
+
+            <!-- Featured Project: Hunk of the Month -->
+            <div class="row gx-5 mb-5">
+                <div class="col-12">
+                    <div class="card shadow border-0 h-100 bg-gradient-primary-to-secondary text-white">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8">
+                                    <div class="badge bg-white text-primary mb-3">Featured Project</div>
+                                    <h3 class="card-title fw-bolder mb-3">Hunk of the Month Calendar</h3>
+                                    <p class="card-text mb-4">Full-stack e-commerce web application for AI-generated personalized calendars. Users upload photos, and AI generates custom themed images for each month of the calendar.</p>
+                                    <div class="mb-4">
+                                        <span class="badge bg-white text-primary me-2 mb-2">Flask</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Python</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Gemini AI API</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Stripe Payments</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Printify API</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Fly.io</span>
+                                        <span class="badge bg-white text-primary me-2 mb-2">Docker</span>
+                                    </div>
+                                    <h6 class="fw-bolder mb-2">Technical Highlights:</h6>
+                                    <ul class="mb-4">
+                                        <li>Custom image upload system with client-side compression and sequential AJAX uploads for reliability</li>
+                                        <li>Integration with Google Gemini 2.0 Flash for AI image generation with face preservation</li>
+                                        <li>Printify print-on-demand API integration for calendar fulfillment</li>
+                                        <li>Stripe payment processing with webhook handling</li>
+                                        <li>Docker containerization with custom deployment scripts to handle Fly.io caching issues</li>
+                                        <li>Session-based image storage and real-time thumbnail preview</li>
+                                    </ul>
+                                    <a class="btn btn-light btn-lg fw-bolder" href="https://hunkofthemonth.shop" target="_blank">
+                                        <i class="bi bi-box-arrow-up-right me-2"></i>Visit Live Site
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                                    <div class="display-1 mb-3"><i class="bi bi-calendar-heart"></i></div>
+                                    <div class="small fw-light">E-Commerce + AI + Print-on-Demand</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row gx-5">
+                <!-- Federal Contracting Database -->
+                <div class="col-lg-6 mb-5">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-database"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">Federal Contracting Database</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">PostgreSQL-based system for tracking federal contracting opportunities from SAM.gov API. Designed for Raspberry Pi deployment with 24/7 automated monitoring.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">Python</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">PostgreSQL</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">SAM.gov API</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">ETL</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Automated data population from SAM.gov with optimized NAICS code filtering</li>
+                                <li>Custom scoring algorithm for contract likelihood estimation</li>
+                                <li>SSH tunnel configuration for secure remote database access</li>
+                                <li>CLI tools for querying, filtering, and tracking opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Taco Bell Project -->
                 <div class="col-lg-6 mb-5">
                     <div class="card shadow border-0 h-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bolder">Taco Bell: National Sales Dashboards</h5>
-                            <p class="card-text">Developed 10+ Power BI dashboards tracking sales across all U.S. locations. Partnered with engineers to build scalable backend data structures using Microsoft Fabric and SQL optimization.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-bar-chart-line"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">National Sales Dashboards</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">Enterprise-scale Power BI dashboards tracking sales performance across thousands of locations nationwide for a major QSR brand.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Microsoft Fabric</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">DAX</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>10+ interconnected dashboards for executive and regional leadership</li>
+                                <li>Partnered with data engineers on scalable backend architecture</li>
+                                <li>SQL query optimization for sub-second dashboard refresh</li>
+                                <li>Real-time sales monitoring and trend analysis</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- Animal Supply Company Project -->
+
+                <!-- Predictive Forecasting -->
                 <div class="col-lg-6 mb-5">
                     <div class="card shadow border-0 h-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bolder">Animal Supply Co: Predictive Sales Forecasting</h5>
-                            <p class="card-text">Built Python forecasting models and executive-facing dashboards in Power BI and Tableau. Provided key insights that drove pricing and supply chain decisions.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">Predictive Sales Forecasting</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">Python-based forecasting models and executive dashboards for a national distribution company, driving pricing and supply chain decisions.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">Python</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Scikit-learn</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Tableau</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Time series forecasting with multiple model comparison</li>
+                                <li>Feature engineering for seasonal and promotional effects</li>
+                                <li>Executive-facing visualizations for C-suite presentations</li>
+                                <li>Model accuracy tracking and automated retraining</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- Midland Credit Management Project -->
+
+                <!-- ETL Automation -->
                 <div class="col-lg-6 mb-5">
                     <div class="card shadow border-0 h-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bolder">Midland Credit: ETL and KPI Automation</h5>
-                            <p class="card-text">Engineered ETL pipelines to handle 100s of financial reports and automated performance dashboards, improving KPI reliability and leadership visibility.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-gear-wide-connected"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">ETL & KPI Automation</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">Automated ETL pipelines processing hundreds of financial reports with performance dashboards for leadership visibility.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">Python</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">ETL</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Python scripts for automated data extraction and transformation</li>
+                                <li>Error handling and logging for pipeline reliability</li>
+                                <li>KPI dashboards with drill-down capabilities</li>
+                                <li>Reduced manual reporting time by 80%</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <!-- PCS Industries Project -->
+
+                <!-- E-Commerce Intelligence -->
                 <div class="col-lg-6 mb-5">
                     <div class="card shadow border-0 h-100">
                         <div class="card-body p-4">
-                            <h5 class="card-title fw-bolder">PCS Industries: E-Commerce Intelligence</h5>
-                            <p class="card-text">Created full-stack Power BI dashboards from stakeholder input to deployment. Improved sourcing decisions with SQL-driven reporting, reducing costs and boosting competitiveness.</p>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-cart3"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">E-Commerce Analytics</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">Full-stack Power BI dashboards from stakeholder input to deployment, improving sourcing decisions and reducing costs.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">DAX</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Data Modeling</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Stakeholder requirements gathering and dashboard design</li>
+                                <li>SQL-driven reporting for product sourcing optimization</li>
+                                <li>Competitive analysis and margin tracking</li>
+                                <li>Self-service analytics training for business users</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
+
+                <!-- Photography Website -->
+                <div class="col-lg-6 mb-5">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-camera"></i>
+                                </div>
+                                <h5 class="card-title fw-bolder mb-0">Photography Portfolio Website</h5>
+                            </div>
+                            <p class="card-text text-muted mb-3">Custom responsive portfolio website for a professional photographer with gallery management and contact functionality.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-light text-dark me-1 mb-1">HTML/CSS</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">JavaScript</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Responsive Design</span>
+                                <span class="badge bg-light text-dark me-1 mb-1">Git</span>
+                            </div>
+                            <ul class="small text-muted">
+                                <li>Mobile-first responsive design</li>
+                                <li>Image gallery with lightbox functionality</li>
+                                <li>SEO optimization for local search visibility</li>
+                                <li>Version control and deployment via GitHub</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-light py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bolder mb-4">Have a project in mind?</h2>
+                    <p class="lead text-muted mb-4">We'd love to discuss how we can help with your data engineering, automation, or application development needs.</p>
+                    <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Get In Touch</a>
                 </div>
             </div>
         </div>

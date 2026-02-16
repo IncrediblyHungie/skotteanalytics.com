@@ -1,220 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Portfolio - ETL, Automation, AI, Web Applications, and Data Engineering Projects" />
-    <meta name="author" content="Skotte Analytics" />
-    <title>Projects - Skotte Analytics</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Case Studies — Skotte Analytics</title>
+    <meta name="description" content="See how we've helped businesses automate processes, build AI models, and create dashboards. Real results from real projects.">
+    <meta name="author" content="Skotte Analytics">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Studies — Skotte Analytics">
+    <meta property="og:description" content="See how we've helped businesses automate processes, build AI models, and create dashboards. Real results from real projects.">
+    <meta property="og:url" content="https://skotteanalytics.com/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Skotte Analytics">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Case Studies — Skotte Analytics">
+    <meta name="twitter:description" content="See how we've helped businesses automate processes, build AI models, and create dashboards. Real results from real projects.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://skotteanalytics.com/projects.html">
+
+    <!-- Favicon & RSS -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Skotte Analytics Blog" href="/feed.xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <style>
+        /* Featured case study card */
+        .case-study-featured {
+            background: linear-gradient(135deg, var(--color-bg-card) 0%, var(--color-bg-subtle) 50%, rgba(6, 214, 160, 0.08) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-10);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .case-study-featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
+        }
+
+        .case-study-featured::after {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.06;
+            pointer-events: none;
+        }
+
+        .case-study-featured:hover {
+            border-color: var(--color-border-hover);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .case-study-featured__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--text-xs);
+            font-weight: var(--weight-semibold);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            background: var(--color-accent-glow);
+            border: 1px solid rgba(6, 214, 160, 0.2);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-5);
+        }
+
+        .case-study-featured__title {
+            font-size: var(--text-3xl);
+            font-weight: var(--weight-bold);
+            color: var(--color-heading);
+            margin-bottom: var(--space-2);
+        }
+
+        .case-study-featured__meta {
+            font-size: var(--text-sm);
+            color: var(--color-text-faint);
+            margin-bottom: var(--space-6);
+        }
+
+        .case-study-featured__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        @media (min-width: 640px) {
+            .case-study-featured__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .case-study-featured__step-label {
+            font-size: var(--text-xs);
+            font-weight: var(--weight-semibold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-2);
+        }
+
+        .case-study-featured__step-text {
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            line-height: var(--leading-relaxed);
+        }
+
+        .case-study-featured__result {
+            font-size: var(--text-lg);
+            font-weight: var(--weight-bold);
+            color: var(--color-accent);
+        }
+
+        .case-study-featured__footer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-4);
+        }
+
+        /* Case study cards (non-featured) */
+        .case-study {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .case-study .card__title {
+            font-size: var(--text-xl);
+            margin-bottom: var(--space-1);
+        }
+
+        .case-study__meta {
+            font-size: var(--text-xs);
+            color: var(--color-text-faint);
+            margin-bottom: var(--space-5);
+        }
+
+        .case-study__step {
+            margin-bottom: var(--space-4);
+        }
+
+        .case-study__step:last-of-type {
+            margin-bottom: var(--space-5);
+        }
+
+        .case-study__step-label {
+            font-size: var(--text-xs);
+            font-weight: var(--weight-semibold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: var(--space-1);
+        }
+
+        .case-study__step-text {
+            font-size: var(--text-sm);
+            color: var(--color-text-muted);
+            line-height: var(--leading-relaxed);
+        }
+
+        .case-study__step-text strong {
+            color: var(--color-accent);
+            font-weight: var(--weight-bold);
+        }
+
+        .case-study__footer {
+            margin-top: auto;
+        }
+    </style>
 </head>
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Skotte Analytics</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+<body>
+
+    <!-- ================================================================
+         Navigation
+         ================================================================ -->
+    <header class="nav-header" role="banner">
+        <div class="container nav-header__inner">
+            <a href="index.html" class="nav-header__logo">Skotte<span>.</span></a>
+
+            <nav class="nav-header__links" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-header__link">Home</a>
+
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-header__link nav-dropdown__trigger">
+                        Services
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown__menu">
+                        <a href="services/ai-solutions.html" class="nav-dropdown__item">AI Solutions</a>
+                        <a href="services/automation.html" class="nav-dropdown__item">Automation</a>
+                        <a href="services/optimization.html" class="nav-dropdown__item">Optimization</a>
+                    </div>
+                </div>
+
+                <a href="projects.html" class="nav-header__link nav-header__link--active">Case Studies</a>
+                <a href="blog.html" class="nav-header__link">Blog</a>
+                <a href="about.html" class="nav-header__link">About</a>
+
+                <div class="nav-header__cta">
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
+                </div>
+            </nav>
+
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-mobile__link">Home</a>
+        <a href="projects.html" class="nav-mobile__link">Case Studies</a>
+        <a href="blog.html" class="nav-mobile__link">Blog</a>
+        <a href="about.html" class="nav-mobile__link">About</a>
+
+        <div class="nav-mobile__sublabel">Services</div>
+        <a href="services/ai-solutions.html" class="nav-mobile__sublink">AI Solutions</a>
+        <a href="services/automation.html" class="nav-mobile__sublink">Automation</a>
+        <a href="services/optimization.html" class="nav-mobile__sublink">Optimization</a>
+
+        <div class="nav-mobile__cta">
+            <a href="contact.html" class="btn btn-primary btn--lg" style="width:100%;justify-content:center;">Contact Us</a>
         </div>
     </nav>
 
-    <section class="py-5">
-        <div class="container px-5">
-            <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder"><span class="text-gradient d-inline">Projects</span></h1>
-                <p class="lead fw-light text-muted">A selection of our recent data engineering, automation, and web application projects.</p>
+    <main>
+        <!-- ================================================================
+             Page Header
+             ================================================================ -->
+        <section class="page-header">
+            <div class="page-header__bg" aria-hidden="true">
+                <div class="hero__gradient hero__gradient--1"></div>
+                <div class="hero__gradient hero__gradient--2"></div>
+                <div class="hero__grid-pattern"></div>
             </div>
 
-            <!-- Featured Project: Federal Contracting Database -->
-            <div class="row gx-5 mb-5">
-                <div class="col-12">
-                    <div class="card shadow border-0 h-100 bg-gradient-primary-to-secondary text-white">
-                        <div class="card-body p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-8">
-                                    <div class="badge bg-white text-primary mb-3">Featured Project</div>
-                                    <h3 class="card-title fw-bolder mb-3">Federal Contracting Database</h3>
-                                    <p class="card-text mb-4">PostgreSQL-based system for tracking and analyzing federal contracting opportunities from the SAM.gov API. Automated ETL pipeline with intelligent scoring algorithms for opportunity prioritization.</p>
-                                    <div class="mb-4">
-                                        <span class="badge bg-white text-primary me-2 mb-2">Python</span>
-                                        <span class="badge bg-white text-primary me-2 mb-2">PostgreSQL</span>
-                                        <span class="badge bg-white text-primary me-2 mb-2">SAM.gov API</span>
-                                        <span class="badge bg-white text-primary me-2 mb-2">ETL Pipeline</span>
-                                        <span class="badge bg-white text-primary me-2 mb-2">Linux</span>
-                                        <span class="badge bg-white text-primary me-2 mb-2">SSH</span>
-                                    </div>
-                                    <h6 class="fw-bolder mb-2">Technical Highlights:</h6>
-                                    <ul class="mb-4">
-                                        <li>Automated data extraction from SAM.gov with optimized NAICS code filtering</li>
-                                        <li>Custom scoring algorithm for contract likelihood and fit estimation</li>
-                                        <li>PostgreSQL database with optimized indexes for fast opportunity queries</li>
-                                        <li>Secure SSH tunnel configuration for remote database access</li>
-                                        <li>CLI tools for querying, filtering, and tracking opportunities</li>
-                                        <li>Designed for 24/7 automated monitoring on low-power hardware</li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                                    <div class="display-1 mb-3"><i class="bi bi-database-fill-gear"></i></div>
-                                    <div class="small fw-light">Government Data + ETL + Automation</div>
-                                </div>
-                            </div>
+            <div class="container page-header__content">
+                <div class="section__label">Case Studies</div>
+                <h1>Real Results for Real Businesses</h1>
+                <p class="section__subtitle">See how we've helped businesses automate processes, build AI models, and create dashboards.</p>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             Featured Case Study: ETL & KPI Automation
+             ================================================================ -->
+        <section class="section section--lg" style="background: var(--color-surface); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div class="case-study-featured reveal">
+                    <div class="case-study-featured__badge">Featured Project</div>
+                    <h2 class="case-study-featured__title">ETL & KPI Automation</h2>
+                    <div class="case-study-featured__meta">Financial services company &mdash; ~$100K project (2024)</div>
+
+                    <div class="case-study-featured__grid">
+                        <div>
+                            <div class="case-study-featured__step-label">Challenge</div>
+                            <p class="case-study-featured__step-text">Hundreds of financial reports processed manually each month, eating up analyst time and introducing errors.</p>
                         </div>
+                        <div>
+                            <div class="case-study-featured__step-label">Solution</div>
+                            <p class="case-study-featured__step-text">Python ETL pipelines with automated extraction, transformation, and loading. KPI dashboards for leadership visibility.</p>
+                        </div>
+                        <div>
+                            <div class="case-study-featured__step-label">Result</div>
+                            <p class="case-study-featured__result">80% reduction in manual reporting time</p>
+                        </div>
+                    </div>
+
+                    <div class="case-study-featured__footer">
+                        <div class="card__tags">
+                            <span class="card__tag">Python</span>
+                            <span class="card__tag">SQL</span>
+                            <span class="card__tag">ETL</span>
+                            <span class="card__tag">Power BI</span>
+                        </div>
+                        <a href="services/automation.html" class="card__link">
+                            Related Service: Automation
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="row gx-5">
-                <!-- National Sales Dashboards -->
-                <div class="col-lg-6 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                    <i class="bi bi-bar-chart-line"></i>
-                                </div>
-                                <h5 class="card-title fw-bolder mb-0">National Sales Dashboards</h5>
+        <!-- ================================================================
+             Case Studies Grid
+             ================================================================ -->
+        <section class="section section--lg">
+            <div class="container">
+                <div class="grid grid--2">
+
+                    <!-- Case Study 2: Predictive Sales Forecasting -->
+                    <div class="card case-study reveal reveal--delay-1">
+                        <h3 class="card__title">Predictive Sales Forecasting</h3>
+                        <div class="case-study__meta">National distribution company &mdash; ~$100K project (2023)</div>
+
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Challenge</div>
+                            <p class="case-study__step-text">Pricing and supply chain decisions based on gut feelings, leading to missed opportunities and excess inventory.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Solution</div>
+                            <p class="case-study__step-text">Python-based forecasting models with time series analysis. Executive dashboards for C-suite presentations.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Result</div>
+                            <p class="case-study__step-text"><strong>Data-driven pricing and supply chain optimization</strong></p>
+                        </div>
+
+                        <div class="case-study__footer">
+                            <div class="card__tags">
+                                <span class="card__tag">Python</span>
+                                <span class="card__tag">Scikit-learn</span>
+                                <span class="card__tag">Power BI</span>
+                                <span class="card__tag">Tableau</span>
                             </div>
-                            <p class="card-text text-muted mb-3">Enterprise-scale Power BI dashboards tracking sales performance across thousands of locations nationwide for a major QSR brand. <span class="fw-semibold text-dark">~$25K project (2024)</span></p>
-                            <div class="mb-3">
-                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Microsoft Fabric</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">DAX</span>
-                            </div>
-                            <ul class="small text-muted">
-                                <li>10+ interconnected dashboards for executive and regional leadership</li>
-                                <li>Partnered with data engineers on scalable backend architecture</li>
-                                <li>SQL query optimization for sub-second dashboard refresh</li>
-                                <li>Real-time sales monitoring and trend analysis</li>
-                            </ul>
+                            <a href="services/ai-solutions.html" class="card__link">
+                                Related Service: AI Solutions
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Case Study 3: National Sales Dashboards -->
+                    <div class="card case-study reveal reveal--delay-2">
+                        <h3 class="card__title">National Sales Dashboards</h3>
+                        <div class="case-study__meta">Major QSR brand &mdash; ~$25K project (2024)</div>
+
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Challenge</div>
+                            <p class="case-study__step-text">No real-time visibility into sales across thousands of locations nationwide.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Solution</div>
+                            <p class="case-study__step-text">10+ Power BI dashboards for executive and regional leadership. SQL optimization for sub-second refresh.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Result</div>
+                            <p class="case-study__step-text"><strong>Real-time nationwide sales monitoring</strong></p>
+                        </div>
+
+                        <div class="case-study__footer">
+                            <div class="card__tags">
+                                <span class="card__tag">Power BI</span>
+                                <span class="card__tag">Microsoft Fabric</span>
+                                <span class="card__tag">SQL</span>
+                                <span class="card__tag">DAX</span>
+                            </div>
+                            <a href="services/optimization.html" class="card__link">
+                                Related Service: Optimization
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4: E-Commerce Analytics -->
+                    <div class="card case-study reveal reveal--delay-1">
+                        <h3 class="card__title">E-Commerce Analytics</h3>
+                        <div class="case-study__meta">E-commerce retailer &mdash; 2023</div>
+
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Challenge</div>
+                            <p class="case-study__step-text">No data-driven sourcing or pricing strategy, leaving margin on the table.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Solution</div>
+                            <p class="case-study__step-text">Power BI dashboards from stakeholder input to deployment. SQL-driven reporting for product performance.</p>
+                        </div>
+                        <div class="case-study__step">
+                            <div class="case-study__step-label">Result</div>
+                            <p class="case-study__step-text"><strong>Optimized product sourcing and improved margins</strong></p>
+                        </div>
+
+                        <div class="case-study__footer">
+                            <div class="card__tags">
+                                <span class="card__tag">Power BI</span>
+                                <span class="card__tag">SQL</span>
+                                <span class="card__tag">DAX</span>
+                                <span class="card__tag">Data Modeling</span>
+                            </div>
+                            <a href="services/optimization.html" class="card__link">
+                                Related Service: Optimization
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
+            </div>
+        </section>
 
-                <!-- ETL & KPI Automation - moved up -->
-                <div class="col-lg-6 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                    <i class="bi bi-gear-wide-connected"></i>
-                                </div>
-                                <h5 class="card-title fw-bolder mb-0">ETL & KPI Automation</h5>
-                            </div>
-                            <p class="card-text text-muted mb-3">Automated ETL pipelines processing hundreds of financial reports with performance dashboards for leadership visibility. <span class="fw-semibold text-dark">~$100K project (2024)</span></p>
-                            <div class="mb-3">
-                                <span class="badge bg-light text-dark me-1 mb-1">Python</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">ETL</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
-                            </div>
-                            <ul class="small text-muted">
-                                <li>Python scripts for automated data extraction and transformation</li>
-                                <li>Error handling and logging for pipeline reliability</li>
-                                <li>KPI dashboards with drill-down capabilities</li>
-                                <li><strong>Reduced manual reporting time by 80%</strong></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- ================================================================
+             CTA Section
+             ================================================================ -->
+        <section class="section section--lg cta-banner">
+            <div class="cta-banner__glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="cta-banner__inner reveal">
+                    <h2 class="cta-banner__title">Have a project in mind?</h2>
+                    <p class="cta-banner__text">Tell us what you're working on. We'll show you what's possible.</p>
+                    <a href="contact.html" class="btn btn-primary btn--lg">Get In Touch</a>
                 </div>
+            </div>
+        </section>
+    </main>
 
-                <!-- Predictive Forecasting -->
-                <div class="col-lg-6 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                    <i class="bi bi-graph-up-arrow"></i>
-                                </div>
-                                <h5 class="card-title fw-bolder mb-0">Predictive Sales Forecasting</h5>
-                            </div>
-                            <p class="card-text text-muted mb-3">Python-based forecasting models and executive dashboards for a national distribution company, driving pricing and supply chain decisions. <span class="fw-semibold text-dark">~$100K project (2023)</span></p>
-                            <div class="mb-3">
-                                <span class="badge bg-light text-dark me-1 mb-1">Python</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Scikit-learn</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Tableau</span>
-                            </div>
-                            <ul class="small text-muted">
-                                <li>Time series forecasting with multiple model comparison</li>
-                                <li>Feature engineering for seasonal and promotional effects</li>
-                                <li>Executive-facing visualizations for C-suite presentations</li>
-                                <li>Model accuracy tracking and automated retraining</li>
-                            </ul>
-                        </div>
-                    </div>
+    <!-- ================================================================
+         Footer
+         ================================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__inner">
+            <div class="site-footer__top">
+                <div>
+                    <div class="site-footer__brand">Skotte<span>.</span></div>
+                    <p class="site-footer__tagline">AI and automation consulting for growing businesses.</p>
                 </div>
-
-                <!-- E-Commerce Intelligence -->
-                <div class="col-lg-6 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                    <i class="bi bi-cart3"></i>
-                                </div>
-                                <h5 class="card-title fw-bolder mb-0">E-Commerce Analytics</h5>
-                            </div>
-                            <p class="card-text text-muted mb-3">Full-stack Power BI dashboards from stakeholder input to deployment, improving sourcing decisions and reducing costs. <span class="fw-semibold text-dark">(2023)</span></p>
-                            <div class="mb-3">
-                                <span class="badge bg-light text-dark me-1 mb-1">Power BI</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">SQL</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">DAX</span>
-                                <span class="badge bg-light text-dark me-1 mb-1">Data Modeling</span>
-                            </div>
-                            <ul class="small text-muted">
-                                <li>Stakeholder requirements gathering and dashboard design</li>
-                                <li>SQL-driven reporting for product sourcing optimization</li>
-                                <li>Competitive analysis and margin tracking</li>
-                                <li>Self-service analytics training for business users</li>
-                            </ul>
-                        </div>
-                    </div>
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <a href="index.html" class="site-footer__link">Home</a>
+                    <a href="services.html" class="site-footer__link">Services</a>
+                    <a href="projects.html" class="site-footer__link">Case Studies</a>
+                    <a href="blog.html" class="site-footer__link">Blog</a>
+                    <a href="about.html" class="site-footer__link">About</a>
+                    <a href="contact.html" class="site-footer__link">Contact</a>
+                </nav>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 Skotte Analytics. All rights reserved.</p>
+                <div class="site-footer__socials">
+                    <a href="https://www.linkedin.com/in/peterskotte1" class="site-footer__social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/peterskotte" class="site-footer__social" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- CTA Section -->
-    <section class="bg-light py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bolder mb-4">Have a project in mind?</h2>
-                    <p class="lead text-muted mb-4">We'd love to discuss how we can help with your data engineering, automation, or application development needs.</p>
-                    <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Get In Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-<footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto"><div class="small m-0">&copy; Skotte Analytics 2025</div></div>
-            <div class="col-auto">
-                <a class="small" href="#">Privacy</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="#">Terms</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="contact.html">Contact</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+    <!-- ================================================================
+         Scripts
+         ================================================================ -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMobile = document.querySelector('.nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMobile.classList.toggle('is-open');
+                navToggle.classList.toggle('is-active');
+                navToggle.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        // Scroll reveal (IntersectionObserver)
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        } else {
+            reveals.forEach(el => el.classList.add('is-visible'));
+        }
+    </script>
 </body>
 </html>

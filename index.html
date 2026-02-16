@@ -1,186 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Government Microservices Consulting - ETL, Automation, Python, AI, Predictive Modeling, and Web Applications" />
-    <meta name="author" content="Skotte Analytics" />
-    <title>Skotte Analytics - Government Technology Solutions</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skotte Analytics — AI & Automation for Growing Businesses</title>
+    <meta name="description" content="AI and automation consulting for small and mid-market businesses. Cut costs, save time, and grow revenue with custom AI solutions, process automation, and data optimization.">
+    <meta name="author" content="Skotte Analytics">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Skotte Analytics — AI & Automation for Growing Businesses">
+    <meta property="og:description" content="AI and automation consulting for small and mid-market businesses. Cut costs, save time, and grow revenue with custom AI solutions, process automation, and data optimization.">
+    <meta property="og:url" content="https://skotteanalytics.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Skotte Analytics">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Skotte Analytics — AI & Automation for Growing Businesses">
+    <meta name="twitter:description" content="AI and automation consulting for small and mid-market businesses. Cut costs, save time, and grow revenue with custom AI solutions, process automation, and data optimization.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://skotteanalytics.com/">
+
+    <!-- Favicon & RSS -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Skotte Analytics Blog" href="/feed.xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Skotte Analytics",
+        "url": "https://skotteanalytics.com",
+        "description": "AI and automation consulting for small and mid-market businesses.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "peter@skotteanalytics.com",
+            "telephone": "+1-619-800-0024",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Skotte Analytics",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "San Diego",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-619-800-0024",
+        "email": "peter@skotteanalytics.com",
+        "url": "https://skotteanalytics.com"
+    }
+    </script>
 </head>
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Skotte Analytics</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <header class="py-5">
-        <div class="container px-5 pb-5">
-            <div class="row gx-5 align-items-center">
-                <div class="col-xxl-5">
-                    <div class="text-center text-xxl-start">
-                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                            <div class="text-uppercase">Python &middot; ETL &middot; AI &middot; Automation</div>
-                        </div>
-                        <div class="fs-3 fw-light text-muted">Federal Technology Partner</div>
-                        <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Modern solutions for government agencies.</span></h1>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                            <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="services.html">Our Services</a>
-                            <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">View Projects</a>
-                        </div>
+<body>
+
+    <!-- ================================================================
+         Navigation
+         ================================================================ -->
+    <header class="nav-header" role="banner">
+        <div class="container nav-header__inner">
+            <a href="index.html" class="nav-header__logo">Skotte<span>.</span></a>
+
+            <nav class="nav-header__links" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-header__link nav-header__link--active">Home</a>
+
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-header__link nav-dropdown__trigger">
+                        Services
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown__menu">
+                        <a href="services/ai-solutions.html" class="nav-dropdown__item">AI Solutions</a>
+                        <a href="services/automation.html" class="nav-dropdown__item">Automation</a>
+                        <a href="services/optimization.html" class="nav-dropdown__item">Optimization</a>
                     </div>
                 </div>
-                <div class="col-xxl-7">
-                    <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                        <div class="profile bg-gradient-primary-to-secondary">
-                            <img class="profile-img" src="assets/profile.png" alt="Skotte Analytics" />
-                        </div>
-                    </div>
+
+                <a href="projects.html" class="nav-header__link">Case Studies</a>
+                <a href="blog.html" class="nav-header__link">Blog</a>
+                <a href="about.html" class="nav-header__link">About</a>
+
+                <div class="nav-header__cta">
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
                 </div>
-            </div>
+            </nav>
+
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+            </button>
         </div>
     </header>
 
-    <!-- Services Overview Section -->
-    <section class="bg-light py-5">
-        <div class="container px-5">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">What We Do</span></h2>
-                <p class="lead fw-light text-muted">Specialized technology services designed for federal and state agencies</p>
-            </div>
-            <div class="row gx-5">
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-diagram-3"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">ETL & Data Pipelines</h5>
-                            <p class="card-text text-muted">Extract, transform, and load data from disparate sources. Build reliable, scalable pipelines that power agency decision-making.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-robot"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">AI & Predictive Modeling</h5>
-                            <p class="card-text text-muted">Machine learning models for forecasting, classification, and anomaly detection. Turn historical data into actionable predictions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-gear-wide-connected"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">Process Automation</h5>
-                            <p class="card-text text-muted">Python-powered automation for repetitive tasks. Reduce manual effort and human error across agency workflows.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-bar-chart-line"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">Business Intelligence</h5>
-                            <p class="card-text text-muted">Power BI, Tableau, and custom dashboards that give leadership real-time visibility into operations and KPIs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-window-stack"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">Web Applications</h5>
-                            <p class="card-text text-muted">Custom Flask and Python web applications. Small, focused tools that solve specific agency problems efficiently.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="card shadow border-0 h-100">
-                        <div class="card-body p-4 text-center">
-                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center;">
-                                <i class="bi bi-cloud"></i>
-                            </div>
-                            <h5 class="card-title fw-bolder">Cloud & Infrastructure</h5>
-                            <p class="card-text text-muted">AWS deployment, containerization, and infrastructure management. Secure, scalable solutions for government workloads.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-mobile__link">Home</a>
+        <a href="projects.html" class="nav-mobile__link">Case Studies</a>
+        <a href="blog.html" class="nav-mobile__link">Blog</a>
+        <a href="about.html" class="nav-mobile__link">About</a>
 
-    <!-- About Section -->
-    <section class="py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-xxl-8">
-                    <div class="text-center my-5">
-                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Us</span></h2>
-                        <p class="lead fw-light mb-4">Skotte Analytics is a technology consulting firm based in San Diego, specializing in data engineering and software solutions for federal and state government agencies.</p>
-                        <p class="text-muted">We bring private-sector agility to public-sector challenges. Our team builds ETL pipelines, predictive models, automation scripts, and web applications that help agencies modernize their operations. From SAM.gov contract tracking to custom dashboards, we deliver practical solutions that work.</p>
-                        <div class="d-flex justify-content-center fs-2 gap-4 mt-4">
-                            <a class="text-gradient" href="https://www.linkedin.com/in/peterskotte1"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-gradient" href="https://github.com/peterskotte"><i class="bi bi-github"></i></a>
-                        </div>
+        <div class="nav-mobile__sublabel">Services</div>
+        <a href="services/ai-solutions.html" class="nav-mobile__sublink">AI Solutions</a>
+        <a href="services/automation.html" class="nav-mobile__sublink">Automation</a>
+        <a href="services/optimization.html" class="nav-mobile__sublink">Optimization</a>
+
+        <div class="nav-mobile__cta">
+            <a href="contact.html" class="btn btn-primary btn--lg" style="width:100%;justify-content:center;">Contact Us</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ================================================================
+             Hero
+             ================================================================ -->
+        <section class="hero">
+            <div class="hero__bg" aria-hidden="true">
+                <div class="hero__gradient hero__gradient--1"></div>
+                <div class="hero__gradient hero__gradient--2"></div>
+                <div class="hero__grid-pattern"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__badge">AI & Automation Consulting</div>
+
+                    <h1 class="hero__title">AI & Automation for Growing Businesses</h1>
+
+                    <p class="hero__subtitle">We help business owners cut costs, save time, and grow revenue with AI, automation, and data-driven optimization.</p>
+
+                    <div class="hero__actions btn-group">
+                        <a href="contact.html" class="btn btn-primary btn--lg">Let's Talk</a>
+                        <a href="projects.html" class="btn btn-secondary btn--lg">See Our Work</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="bg-light py-5">
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="fw-bolder mb-4">Ready to modernize your agency?</h2>
-                    <p class="lead text-muted mb-4">Let's discuss how we can help streamline your data operations, build predictive models, or automate manual processes.</p>
-                    <a class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Get In Touch</a>
+        <!-- ================================================================
+             Services Overview
+             ================================================================ -->
+        <section class="section section--lg services" id="services">
+            <div class="container">
+                <div class="section__header section__header--center reveal">
+                    <div class="section__label">What We Do</div>
+                    <h2 class="section__title">Solutions that move your business forward</h2>
+                    <p class="section__subtitle">We build custom AI tools, automate your workflows, and give you the data clarity to make smarter decisions.</p>
+                </div>
+
+                <div class="grid grid--3">
+                    <!-- AI Solutions -->
+                    <a href="services/ai-solutions.html" class="card reveal reveal--delay-1" style="text-decoration:none;">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a4 4 0 0 1 4 4v1a1 1 0 0 0 1 1h1a4 4 0 0 1 0 8h-1a1 1 0 0 0-1 1v1a4 4 0 0 1-8 0v-1a1 1 0 0 0-1-1H6a4 4 0 0 1 0-8h1a1 1 0 0 0 1-1V6a4 4 0 0 1 4-4z"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">AI Solutions</h3>
+                        <p class="card__text">Put AI to work in your business. From chatbots and content generation to AI-powered workflows and custom integrations.</p>
+                        <div class="card__tags">
+                            <span class="card__tag">Chatbots</span>
+                            <span class="card__tag">Content Gen</span>
+                            <span class="card__tag">AI Workflows</span>
+                            <span class="card__tag">Integrations</span>
+                        </div>
+                        <span class="card__link">
+                            Learn more
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+
+                    <!-- Process Automation -->
+                    <a href="services/automation.html" class="card reveal reveal--delay-2" style="text-decoration:none;">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Process Automation</h3>
+                        <p class="card__text">Stop doing things the slow way. Automate reports, data entry, file management, and every repetitive task slowing you down.</p>
+                        <div class="card__tags">
+                            <span class="card__tag">Reports</span>
+                            <span class="card__tag">Data Entry</span>
+                            <span class="card__tag">File Mgmt</span>
+                            <span class="card__tag">Workflows</span>
+                        </div>
+                        <span class="card__link">
+                            Learn more
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+
+                    <!-- Optimization & Analytics -->
+                    <a href="services/optimization.html" class="card reveal reveal--delay-3" style="text-decoration:none;">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                                <line x1="3" y1="20" x2="21" y2="20"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Optimization & Analytics</h3>
+                        <p class="card__text">Make decisions with data, not gut feelings. Dashboards, forecasting, KPI tracking, and analysis that drives growth.</p>
+                        <div class="card__tags">
+                            <span class="card__tag">Dashboards</span>
+                            <span class="card__tag">Forecasting</span>
+                            <span class="card__tag">KPI Tracking</span>
+                            <span class="card__tag">Analysis</span>
+                        </div>
+                        <span class="card__link">
+                            Learn more
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             Social Proof / Metrics
+             ================================================================ -->
+        <section class="section metrics">
+            <div class="container">
+                <div class="metrics__grid reveal">
+                    <div class="metric">
+                        <div class="metric__value">$225K+</div>
+                        <div class="metric__label">In delivered projects</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric__value">80%</div>
+                        <div class="metric__label">Reduction in manual work</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric__value">Nationwide</div>
+                        <div class="metric__label">Clients across the U.S.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             About Teaser
+             ================================================================ -->
+        <section class="section section--lg about-teaser">
+            <div class="container">
+                <div class="about-teaser__inner reveal">
+                    <div class="section__label">About</div>
+                    <h2 class="section__title">Built by a builder</h2>
+                    <p class="about-teaser__text">Skotte Analytics is led by Peter Skotte, a San Diego-based technologist who has spent his career building data pipelines, automation systems, and AI-powered tools for businesses of all sizes. We are not a slide-deck consultancy. We write code, ship products, and solve real problems.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             CTA Section
+             ================================================================ -->
+        <section class="section section--lg cta-banner">
+            <div class="cta-banner__glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="cta-banner__inner reveal">
+                    <h2 class="cta-banner__title">Ready to put AI to work for your business?</h2>
+                    <p class="cta-banner__text">Tell us what's slowing you down. We'll show you what's possible.</p>
+                    <a href="contact.html" class="btn btn-primary btn--lg">Get Started</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================================================
+         Footer
+         ================================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__inner">
+            <div class="site-footer__top">
+                <div>
+                    <div class="site-footer__brand">Skotte<span>.</span></div>
+                    <p class="site-footer__tagline">AI and automation consulting for growing businesses.</p>
+                </div>
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <a href="index.html" class="site-footer__link">Home</a>
+                    <a href="services.html" class="site-footer__link">Services</a>
+                    <a href="projects.html" class="site-footer__link">Case Studies</a>
+                    <a href="blog.html" class="site-footer__link">Blog</a>
+                    <a href="about.html" class="site-footer__link">About</a>
+                    <a href="contact.html" class="site-footer__link">Contact</a>
+                </nav>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 Skotte Analytics. All rights reserved.</p>
+                <div class="site-footer__socials">
+                    <a href="https://www.linkedin.com/in/peterskotte1" class="site-footer__social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/peterskotte" class="site-footer__social" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-</main>
-<footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto"><div class="small m-0">&copy; Skotte Analytics 2025</div></div>
-            <div class="col-auto">
-                <a class="small" href="#">Privacy</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="#">Terms</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="contact.html">Contact</a>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+    </footer>
+
+    <!-- ================================================================
+         Scripts
+         ================================================================ -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMobile = document.querySelector('.nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMobile.classList.toggle('is-open');
+                navToggle.classList.toggle('is-active');
+                navToggle.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        // Scroll reveal (IntersectionObserver)
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        } else {
+            reveals.forEach(el => el.classList.add('is-visible'));
+        }
+    </script>
 </body>
 </html>

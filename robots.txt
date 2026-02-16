@@ -1,0 +1,60 @@
+# robots.txt - Skotte Analytics
+# Strategy: Allow search engines + AI search assistants, block AI training crawlers
+
+# Major Search Engines - Allow
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI Search Assistants - Allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+# AI Training Crawlers - Block
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Default - Allow all other bots
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://skotteanalytics.com/sitemap.xml

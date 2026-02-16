@@ -1,0 +1,30 @@
+# Skotte Analytics
+
+> AI & Automation consulting for growing businesses. Based in San Diego, CA.
+
+## Services
+
+- AI Solutions: Custom AI integrations, chatbots, content generation workflows, and AI-powered business tools
+- Process Automation: Python-powered automation for reports, data entry, file management, and repetitive business tasks
+- Optimization & Analytics: Business intelligence dashboards, KPI tracking, sales forecasting, and data-driven decision making
+
+## About
+
+Skotte Analytics helps small and mid-market businesses implement AI, automate manual processes, and make better decisions with data. Founded by Peter Skotte in San Diego, CA.
+
+## Key URLs
+
+- Homepage: https://skotteanalytics.com/
+- AI Solutions: https://skotteanalytics.com/services/ai-solutions.html
+- Process Automation: https://skotteanalytics.com/services/automation.html
+- Optimization & Analytics: https://skotteanalytics.com/services/optimization.html
+- Case Studies: https://skotteanalytics.com/projects.html
+- Blog: https://skotteanalytics.com/blog/
+- Contact: https://skotteanalytics.com/contact.html
+
+## Contact
+
+- Email: peterskotte@protonmail.com
+- Phone: (858) 254-0491
+- LinkedIn: https://www.linkedin.com/in/peterskotte1
+- GitHub: https://github.com/peterskotte

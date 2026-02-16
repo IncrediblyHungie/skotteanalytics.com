@@ -1,141 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Contact Skotte Analytics - Government Technology Consulting" />
-    <meta name="author" content="Skotte Analytics" />
-    <title>Contact - Skotte Analytics</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact — Skotte Analytics</title>
+    <meta name="description" content="Get in touch with Skotte Analytics. AI, automation, and analytics consulting for growing businesses. Based in San Diego, available nationwide.">
+    <meta name="author" content="Skotte Analytics">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact — Skotte Analytics">
+    <meta property="og:description" content="Get in touch with Skotte Analytics. AI, automation, and analytics consulting for growing businesses. Based in San Diego, available nationwide.">
+    <meta property="og:url" content="https://skotteanalytics.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Skotte Analytics">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact — Skotte Analytics">
+    <meta name="twitter:description" content="Get in touch with Skotte Analytics. AI, automation, and analytics consulting for growing businesses. Based in San Diego, available nationwide.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://skotteanalytics.com/contact.html">
+
+    <!-- Favicon & RSS -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Skotte Analytics Blog" href="/feed.xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- JSON-LD: ContactPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Skotte Analytics",
+        "url": "https://skotteanalytics.com/contact.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Skotte Analytics",
+            "url": "https://skotteanalytics.com",
+            "email": "peterskotte@protonmail.com",
+            "telephone": "+1-858-254-0491",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "San Diego",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/peterskotte1",
+                "https://github.com/peterskotte"
+            ]
+        }
+    }
+    </script>
 </head>
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-            <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Skotte Analytics</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+<body>
+
+    <!-- ================================================================
+         Navigation
+         ================================================================ -->
+    <header class="nav-header" role="banner">
+        <div class="container nav-header__inner">
+            <a href="index.html" class="nav-header__logo">Skotte<span>.</span></a>
+
+            <nav class="nav-header__links" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-header__link">Home</a>
+
+                <div class="nav-dropdown">
+                    <a href="services.html" class="nav-header__link nav-dropdown__trigger">
+                        Services
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="nav-dropdown__menu">
+                        <a href="services/ai-solutions.html" class="nav-dropdown__item">AI Solutions</a>
+                        <a href="services/automation.html" class="nav-dropdown__item">Automation</a>
+                        <a href="services/optimization.html" class="nav-dropdown__item">Optimization</a>
+                    </div>
+                </div>
+
+                <a href="projects.html" class="nav-header__link">Case Studies</a>
+                <a href="blog.html" class="nav-header__link">Blog</a>
+                <a href="about.html" class="nav-header__link">About</a>
+
+                <div class="nav-header__cta">
+                    <a href="contact.html" class="btn btn-primary" aria-current="page">Contact</a>
+                </div>
+            </nav>
+
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html" class="nav-mobile__link">Home</a>
+        <a href="projects.html" class="nav-mobile__link">Case Studies</a>
+        <a href="blog.html" class="nav-mobile__link">Blog</a>
+        <a href="about.html" class="nav-mobile__link">About</a>
+
+        <div class="nav-mobile__sublabel">Services</div>
+        <a href="services/ai-solutions.html" class="nav-mobile__sublink">AI Solutions</a>
+        <a href="services/automation.html" class="nav-mobile__sublink">Automation</a>
+        <a href="services/optimization.html" class="nav-mobile__sublink">Optimization</a>
+
+        <div class="nav-mobile__cta">
+            <a href="contact.html" class="btn btn-primary btn--lg" style="width:100%;justify-content:center;">Contact Us</a>
         </div>
     </nav>
 
-    <section class="py-5">
-        <div class="container px-5">
-            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
-                <div class="text-center mb-5">
-                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3" style="width: 3rem; height: 3rem; display: inline-flex; align-items: center; justify-content: center;">
-                        <i class="bi bi-envelope"></i>
-                    </div>
-                    <h1 class="fw-bolder">Get in Touch</h1>
-                    <p class="lead fw-normal text-muted mb-0">Let's discuss your agency's technology needs</p>
+    <main>
+        <!-- ================================================================
+             Page Header
+             ================================================================ -->
+        <section class="page-header">
+            <div class="page-header__bg" aria-hidden="true">
+                <div class="hero__gradient hero__gradient--1"></div>
+                <div class="hero__gradient hero__gradient--2"></div>
+                <div class="hero__grid-pattern"></div>
+            </div>
+
+            <div class="container page-header__content">
+                <div class="section__label">Contact</div>
+                <h1 class="section__title" style="font-size:clamp(2.25rem, 5vw, var(--text-5xl)); font-weight:var(--weight-extrabold); letter-spacing:-0.03em;">Let's Talk</h1>
+                <p class="section__subtitle" style="max-width:640px;">Tell us about your business challenge. We respond within 24 hours.</p>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             Contact Info Cards
+             ================================================================ -->
+        <section class="section section--lg">
+            <div class="container">
+                <div class="grid grid--2">
+                    <a href="mailto:peterskotte@protonmail.com" class="card reveal reveal--delay-1" style="text-decoration:none; text-align:center;">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Email</h3>
+                        <p class="card__text">peterskotte@protonmail.com</p>
+                    </a>
+
+                    <a href="tel:+18582540491" class="card reveal reveal--delay-2" style="text-decoration:none; text-align:center;">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">Phone</h3>
+                        <p class="card__text">(858) 254-0491</p>
+                    </a>
                 </div>
+            </div>
+        </section>
 
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="row gx-5 gy-4 mb-5">
-                            <div class="col-md-6">
-                                <div class="card shadow-sm border-0 h-100">
-                                    <div class="card-body p-4 text-center">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                            <i class="bi bi-envelope-at"></i>
-                                        </div>
-                                        <h5 class="fw-bolder">Email</h5>
-                                        <a class="text-decoration-none" href="mailto:peterskotte@protonmail.com">peterskotte@protonmail.com</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card shadow-sm border-0 h-100">
-                                    <div class="card-body p-4 text-center">
-                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3 mx-auto" style="width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center;">
-                                            <i class="bi bi-telephone"></i>
-                                        </div>
-                                        <h5 class="fw-bolder">Phone</h5>
-                                        <a class="text-decoration-none" href="tel:8582540491">(858) 254-0491</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <!-- ================================================================
+             Social Links
+             ================================================================ -->
+        <section class="section--sm" style="background:var(--color-surface); border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border);">
+            <div class="container" style="padding-block:var(--space-12);">
+                <div class="section__header section__header--center reveal" style="margin-bottom:var(--space-8);">
+                    <h2 class="section__title" style="font-size:var(--text-xl);">Connect With Us</h2>
+                </div>
+                <div class="reveal" style="display:flex; justify-content:center; gap:var(--space-6);">
+                    <a href="https://www.linkedin.com/in/peterskotte1" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/peterskotte" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                        <div class="text-center mb-4">
-                            <h5 class="fw-bolder mb-3">Connect With Us</h5>
-                            <div class="d-flex justify-content-center fs-2 gap-4 mb-4">
-                                <a class="text-gradient" href="https://www.linkedin.com/in/peterskotte1" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                <a class="text-gradient" href="https://github.com/peterskotte" target="_blank"><i class="bi bi-github"></i></a>
-                            </div>
+        <!-- ================================================================
+             Info Cards
+             ================================================================ -->
+        <section class="section section--lg">
+            <div class="container">
+                <div class="grid grid--3">
+                    <div class="card reveal reveal--delay-1">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
                         </div>
+                        <h3 class="card__title">Location</h3>
+                        <p class="card__text">Based in San Diego, CA. Available for remote engagements nationwide.</p>
+                    </div>
 
-                        <div class="text-center">
-                            <a class="btn btn-outline-primary btn-lg px-4 py-2 fw-bold" href="assets/Peter_C_Skotte.pdf" download>
-                                <i class="bi bi-download me-2"></i>Download Resume
-                            </a>
+                    <div class="card reveal reveal--delay-2">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
                         </div>
+                        <h3 class="card__title">Quick Response</h3>
+                        <p class="card__text">We respond to inquiries within 24 hours on business days.</p>
+                    </div>
+
+                    <div class="card reveal reveal--delay-3">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="card__title">No Commitment</h3>
+                        <p class="card__text">Free initial consultation. Let's see if we're a good fit.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Additional Info -->
-            <div class="row gx-5 mt-5">
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm border-0 h-100">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bolder mb-3"><i class="bi bi-geo-alt text-primary me-2"></i>Location</h5>
-                            <p class="text-muted mb-0">Based in San Diego, CA. Available for remote engagements nationwide.</p>
-                        </div>
-                    </div>
+        <!-- ================================================================
+             CTA Section
+             ================================================================ -->
+        <section class="section section--lg cta-banner">
+            <div class="cta-banner__glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="cta-banner__inner reveal">
+                    <h2 class="cta-banner__title">Ready to put AI to work for your business?</h2>
+                    <p class="cta-banner__text">Tell us what's slowing you down. We'll show you what's possible.</p>
+                    <a href="mailto:peterskotte@protonmail.com" class="btn btn-primary btn--lg">Send Us an Email</a>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm border-0 h-100">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bolder mb-3"><i class="bi bi-building text-primary me-2"></i>Federal Contracting</h5>
-                            <p class="text-muted mb-0">Actively pursuing opportunities through SAM.gov for federal agencies.</p>
-                        </div>
-                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================================================
+         Footer
+         ================================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__inner">
+            <div class="site-footer__top">
+                <div>
+                    <div class="site-footer__brand">Skotte<span>.</span></div>
+                    <p class="site-footer__tagline">AI and automation consulting for growing businesses.</p>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm border-0 h-100">
-                        <div class="card-body p-4">
-                            <h5 class="fw-bolder mb-3"><i class="bi bi-clock text-primary me-2"></i>Response Time</h5>
-                            <p class="text-muted mb-0">We respond to inquiries within 24 hours on business days.</p>
-                        </div>
-                    </div>
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <a href="index.html" class="site-footer__link">Home</a>
+                    <a href="services.html" class="site-footer__link">Services</a>
+                    <a href="projects.html" class="site-footer__link">Case Studies</a>
+                    <a href="blog.html" class="site-footer__link">Blog</a>
+                    <a href="about.html" class="site-footer__link">About</a>
+                    <a href="contact.html" class="site-footer__link">Contact</a>
+                </nav>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; 2026 Skotte Analytics. All rights reserved.</p>
+                <div class="site-footer__socials">
+                    <a href="https://www.linkedin.com/in/peterskotte1" class="site-footer__social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/peterskotte" class="site-footer__social" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-</main>
+    </footer>
 
-<footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto">
-                <div class="small m-0">&copy; Skotte Analytics 2025</div>
-            </div>
-            <div class="col-auto">
-                <a class="small" href="#">Privacy</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="#">Terms</a>
-                <span class="mx-1">&middot;</span>
-                <a class="small" href="contact.html">Contact</a>
-            </div>
-        </div>
-    </div>
-</footer>
+    <!-- ================================================================
+         Scripts
+         ================================================================ -->
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMobile = document.querySelector('.nav-mobile');
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/scripts.js"></script>
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMobile.classList.toggle('is-open');
+                navToggle.classList.toggle('is-active');
+                navToggle.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+        }
+
+        // Scroll reveal (IntersectionObserver)
+        const reveals = document.querySelectorAll('.reveal');
+        if (reveals.length && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            reveals.forEach(el => observer.observe(el));
+        } else {
+            reveals.forEach(el => el.classList.add('is-visible'));
+        }
+    </script>
 </body>
 </html>

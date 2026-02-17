@@ -65,6 +65,15 @@ def get_head_html(title, description, canonical_url, depth, json_ld="", og_type=
 
     <!-- Styles -->
     <link href="{p}css/styles.css" rel="stylesheet">{ld_block}
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GLHECY1Z8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-9GLHECY1Z8');
+    </script>
 </head>
 <body>"""
 

@@ -52,7 +52,9 @@
                 {"@type": "PropertyValue", "name": "NAICS", "value": "541511"},
                 {"@type": "PropertyValue", "name": "NAICS", "value": "541512"},
                 {"@type": "PropertyValue", "name": "NAICS", "value": "541519"},
-                {"@type": "PropertyValue", "name": "NAICS", "value": "541715"}
+                {"@type": "PropertyValue", "name": "NAICS", "value": "518210"},
+                {"@type": "PropertyValue", "name": "NAICS", "value": "541690"},
+                {"@type": "PropertyValue", "name": "NAICS", "value": "541330"}
             ],
             "email": "peter@skotteanalytics.com",
             "telephone": "+1-619-800-0024",
@@ -345,7 +347,7 @@
                         </div>
                         <h3 class="card__title">Predictive Modeling & ML Macros</h3>
                         <p class="card__text">Statistical forecasting models, classification and regression analysis, Python and Excel ML macros, anomaly detection systems, and demand forecasting engines for data-driven agency decision-making.</p>
-                        <div class="gov-naics-tag">NAICS 541715</div>
+                        <div class="gov-naics-tag">NAICS 541511</div>
                     </div>
                 </div>
 
@@ -398,59 +400,150 @@
         </section>
 
         <!-- ================================================================
-             Past Performance / Metrics
+             Past Performance
              ================================================================ -->
-        <section class="section metrics">
+        <section class="section section--lg" id="past-performance">
             <div class="container">
                 <div class="section__header section__header--center reveal" style="margin-bottom: var(--space-10);">
                     <div class="section__label">Past Performance</div>
-                    <h2 class="section__title">Proven delivery record</h2>
+                    <h2 class="section__title">Completed projects with documented results</h2>
                 </div>
-                <div class="metrics__grid reveal">
-                    <div class="metric">
-                        <div class="metric__value">$225K+</div>
-                        <div class="metric__label">In delivered IT projects</div>
-                    </div>
+
+                <!-- Real stats from cap statement -->
+                <div class="metrics__grid reveal" style="margin-bottom: var(--space-12);">
                     <div class="metric">
                         <div class="metric__value">80%</div>
-                        <div class="metric__label">Avg. reduction in manual processing time</div>
+                        <div class="metric__label">Reduction in manual reporting (ETL &amp; KPI project)</div>
                     </div>
                     <div class="metric">
-                        <div class="metric__value">1–2 wks</div>
-                        <div class="metric__label">Typical micro-purchase delivery</div>
+                        <div class="metric__value">10+</div>
+                        <div class="metric__label">Power BI dashboards built (National QSR project)</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric__value">4</div>
+                        <div class="metric__label">Completed client engagements with documented results</div>
                     </div>
                 </div>
-                <div class="reveal" style="margin-top: var(--space-10); display: flex; justify-content: center; gap: var(--space-6); flex-wrap: wrap;">
-                    <div class="card" style="flex: 1; min-width: 200px; max-width: 280px; text-align: center;">
-                        <div class="card__icon" style="margin: 0 auto var(--space-3);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+
+                <!-- Real project cards -->
+                <div class="grid grid--2 reveal">
+                    <div class="card">
+                        <h3 class="card__title">National QSR Brand — Enterprise BI Dashboards</h3>
+                        <p class="card__text">Built 10+ Power BI dashboards tracking sales across thousands of U.S. locations. SQL optimization, Microsoft Fabric backend, executive and regional reporting.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3);">
+                            <span class="card__tag">Power BI</span>
+                            <span class="card__tag">Microsoft Fabric</span>
+                            <span class="card__tag">SQL</span>
+                            <span class="card__tag">DAX</span>
                         </div>
-                        <h3 class="card__title" style="font-size: var(--text-base);">Nationwide Delivery</h3>
-                        <p class="card__text" style="font-size: var(--text-sm);">Remote-capable. Serving agencies across the U.S.</p>
                     </div>
-                    <div class="card" style="flex: 1; min-width: 200px; max-width: 280px; text-align: center;">
-                        <div class="card__icon" style="margin: 0 auto var(--space-3);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
+
+                    <div class="card">
+                        <h3 class="card__title">Financial Services — ETL &amp; KPI Automation</h3>
+                        <p class="card__text">Engineered Python ETL pipelines processing hundreds of financial reports. Automated performance dashboards reduced manual reporting by 80%.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3);">
+                            <span class="card__tag">Python</span>
+                            <span class="card__tag">SQL</span>
+                            <span class="card__tag">ETL</span>
+                            <span class="card__tag">Power BI</span>
                         </div>
-                        <h3 class="card__title" style="font-size: var(--text-base);">SAM.gov Registered</h3>
-                        <p class="card__text" style="font-size: var(--text-sm);">Active registration. Ready to receive award.</p>
                     </div>
-                    <div class="card" style="flex: 1; min-width: 200px; max-width: 280px; text-align: center;">
-                        <div class="card__icon" style="margin: 0 auto var(--space-3);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
+
+                    <div class="card">
+                        <h3 class="card__title">Distribution Company — Predictive Sales Forecasting</h3>
+                        <p class="card__text">Python forecasting models for sales prediction with seasonal effects. Executive dashboards in Power BI and Tableau driving pricing and supply chain decisions.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3);">
+                            <span class="card__tag">Python</span>
+                            <span class="card__tag">Scikit-learn</span>
+                            <span class="card__tag">Power BI</span>
+                            <span class="card__tag">Tableau</span>
                         </div>
-                        <h3 class="card__title" style="font-size: var(--text-base);">Fast Turnaround</h3>
-                        <p class="card__text" style="font-size: var(--text-sm);">Most projects delivered in 1–2 weeks.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card__title">E-Commerce Platform — Full-Stack Web Application</h3>
+                        <p class="card__text">Flask/Python web app with AI API integration, Stripe payments, Docker deployment. Production system handling real transactions.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3);">
+                            <span class="card__tag">Flask</span>
+                            <span class="card__tag">Python</span>
+                            <span class="card__tag">Docker</span>
+                            <span class="card__tag">AI API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             Technical Skills
+             ================================================================ -->
+        <section class="section" style="background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+            <div class="container">
+                <div class="section__header section__header--center reveal" style="margin-bottom: var(--space-8);">
+                    <div class="section__label">Technical Stack</div>
+                    <h2 class="section__title" style="font-size: var(--text-2xl);">Languages, tools &amp; platforms</h2>
+                </div>
+                <div class="reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); max-width: 800px; margin: 0 auto;">
+                    <div>
+                        <div style="font-size: var(--text-xs); font-weight: var(--weight-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-3);">Languages</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                            <span class="card__tag">Python</span>
+                            <span class="card__tag">SQL</span>
+                            <span class="card__tag">JavaScript</span>
+                            <span class="card__tag">DAX</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); font-weight: var(--weight-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-3);">BI &amp; Data</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                            <span class="card__tag">Power BI</span>
+                            <span class="card__tag">Tableau</span>
+                            <span class="card__tag">QuickSight</span>
+                            <span class="card__tag">Pandas</span>
+                            <span class="card__tag">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size: var(--text-xs); font-weight: var(--weight-semibold); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-3);">Infra &amp; Cloud</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                            <span class="card__tag">PostgreSQL</span>
+                            <span class="card__tag">AWS</span>
+                            <span class="card__tag">Azure</span>
+                            <span class="card__tag">Docker</span>
+                            <span class="card__tag">Flask</span>
+                            <span class="card__tag">Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    @media (max-width: 640px) {
+                        #past-performance ~ section > .container > div[style*="grid-template-columns: repeat(3"] {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             Capability Statement Download
+             ================================================================ -->
+        <section class="section">
+            <div class="container container--narrow">
+                <div class="micro-purchase-callout reveal" style="display: flex; flex-direction: column; align-items: center; gap: var(--space-5);">
+                    <svg style="width: 40px; height: 40px; color: var(--color-accent);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <polyline points="9 15 12 18 15 15"/>
+                    </svg>
+                    <div style="text-align: center;">
+                        <div style="font-size: var(--text-lg); font-weight: var(--weight-semibold); color: var(--color-text); margin-bottom: var(--space-2);">Capability Statement</div>
+                        <p style="color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-5);">Full credentials, past performance, NAICS codes, and technical stack — formatted for CO review.</p>
+                        <a href="../assets/capability-statement.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+                            View Capability Statement
+                        </a>
                     </div>
                 </div>
             </div>
@@ -569,7 +662,7 @@
                                 </div>
                                 <div style="display: flex; justify-content: space-between; font-size: var(--text-sm);">
                                     <span style="color: var(--color-text-muted);">NAICS</span>
-                                    <span style="font-family: monospace; font-weight: var(--weight-semibold);">541511, 541512, 541519, 541715</span>
+                                    <span style="font-family: monospace; font-weight: var(--weight-semibold);">541511, 541512, 541519, 518210, 541690, 541330</span>
                                 </div>
                             </div>
                         </div>

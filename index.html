@@ -150,19 +150,35 @@
             </div>
 
             <div class="container">
-                <div class="hero__content">
-                    <div class="hero__badge">AI & Automation Consulting</div>
+                <div class="hero__content hero__content--split" style="max-width: 1100px; display: grid; grid-template-columns: 1fr auto; gap: var(--space-16); align-items: center;">
+                    <div>
+                        <div class="hero__badge">AI & Automation Consulting</div>
 
-                    <h1 class="hero__title">AI & Automation for Growing Businesses</h1>
+                        <h1 class="hero__title">AI & Automation for Growing Businesses</h1>
 
-                    <p class="hero__subtitle">We help business owners cut costs, save time, and grow revenue with AI, automation, and data-driven optimization.</p>
+                        <p class="hero__subtitle">I'm Peter Skotte — I build custom AI tools, automation systems, and data dashboards that cut costs and save time for growing businesses.</p>
 
-                    <div class="hero__actions btn-group">
-                        <a href="contact.html" class="btn btn-primary btn--lg">Let's Talk</a>
-                        <a href="projects.html" class="btn btn-secondary btn--lg">See Our Work</a>
+                        <div class="hero__actions btn-group">
+                            <a href="contact.html" class="btn btn-primary btn--lg">Let's Talk</a>
+                            <a href="projects.html" class="btn btn-secondary btn--lg">See My Work</a>
+                        </div>
+                    </div>
+                    <div class="hero__photo-wrap" style="opacity: 0; animation: fadeInUp 0.6s var(--ease-out) 0.5s forwards; flex-shrink: 0;">
+                        <img src="assets/profile.png" alt="Peter Skotte" style="width: 260px; height: 260px; border-radius: 50%; object-fit: cover; object-position: center top; border: 2px solid rgba(6, 214, 160, 0.35); display: block;">
                     </div>
                 </div>
             </div>
+            <style>
+                @media (max-width: 768px) {
+                    .hero__content--split {
+                        grid-template-columns: 1fr !important;
+                        text-align: center;
+                    }
+                    .hero__photo-wrap {
+                        display: none !important;
+                    }
+                }
+            </style>
         </section>
 
         <!-- ================================================================
@@ -171,9 +187,9 @@
         <section class="section section--lg services" id="services">
             <div class="container">
                 <div class="section__header section__header--center reveal">
-                    <div class="section__label">What We Do</div>
+                    <div class="section__label">What I Do</div>
                     <h2 class="section__title">Solutions that move your business forward</h2>
-                    <p class="section__subtitle">We build custom AI tools, automate your workflows, and give you the data clarity to make smarter decisions.</p>
+                    <p class="section__subtitle">I build custom AI tools, automate your workflows, and give you the data clarity to make smarter decisions.</p>
                 </div>
 
                 <div class="grid grid--3">
@@ -274,13 +290,28 @@
              ================================================================ -->
         <section class="section section--lg about-teaser">
             <div class="container">
-                <div class="about-teaser__inner reveal">
-                    <div class="section__label">About</div>
-                    <h2 class="section__title">Built by a builder</h2>
-                    <p class="about-teaser__text">Skotte Analytics is led by Peter Skotte, a San Diego-based technologist who has spent his career building data pipelines, automation systems, and AI-powered tools for businesses of all sizes. We are not a slide-deck consultancy. We write code, ship products, and solve real problems.</p>
-                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                <div class="reveal" style="display: grid; grid-template-columns: auto 1fr; gap: var(--space-16); align-items: center; max-width: 960px; margin: 0 auto;">
+                    <div style="flex-shrink: 0;">
+                        <img src="assets/profile.png" alt="Peter Skotte" style="width: 200px; height: 200px; border-radius: var(--radius-xl); object-fit: cover; object-position: center top; display: block; border: 1px solid var(--color-border);">
+                    </div>
+                    <div>
+                        <div class="section__label" style="margin-bottom: var(--space-3);">About</div>
+                        <h2 class="section__title" style="margin-bottom: var(--space-4);">You work with me directly — not an agency</h2>
+                        <p class="about-teaser__text" style="margin-bottom: var(--space-4);">I'm Peter Skotte, a San Diego-based data engineer and software developer. I've spent my career building Power BI dashboards, Python automation pipelines, and AI-powered tools for businesses across finance, distribution, and retail.</p>
+                        <p class="about-teaser__text" style="margin-bottom: var(--space-8);">No account managers, no handoffs, no layers. When you hire me, I'm the one writing your code and delivering your results.</p>
+                        <a href="about.html" class="btn btn-secondary">About Me</a>
+                    </div>
                 </div>
             </div>
+            <style>
+                @media (max-width: 640px) {
+                    .about-teaser .reveal[style*="grid-template-columns"] {
+                        grid-template-columns: 1fr !important;
+                        justify-items: center;
+                        text-align: center;
+                    }
+                }
+            </style>
         </section>
 
         <!-- ================================================================
@@ -291,7 +322,7 @@
             <div class="container">
                 <div class="cta-banner__inner reveal">
                     <h2 class="cta-banner__title">Ready to put AI to work for your business?</h2>
-                    <p class="cta-banner__text">Tell us what's slowing you down. We'll show you what's possible.</p>
+                    <p class="cta-banner__text">Tell me what's slowing you down. I'll show you what's possible.</p>
                     <a href="contact.html" class="btn btn-primary btn--lg">Get Started</a>
                 </div>
             </div>

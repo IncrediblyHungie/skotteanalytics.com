@@ -39,9 +39,13 @@
   ];
 
   var CREDS_LAYOUTS = [
-    { name: 'Grid (current)', id: 'grid'  },
-    { name: 'Pills',          id: 'pills' },
-    { name: 'Table',          id: 'table' },
+    { name: 'Grid (current)', id: 'grid'     },
+    { name: 'Pills',          id: 'pills'    },
+    { name: 'Table',          id: 'table'    },
+    { name: 'Ticker strip',   id: 'ticker'   },
+    { name: 'Cards',          id: 'cards'    },
+    { name: 'Active-first',   id: 'active'   },
+    { name: 'Mono terminal',  id: 'terminal' },
   ];
 
   /* ─── SERVICE CARD STYLE ──────────────────────────────────── */
@@ -135,6 +139,66 @@
             '</tr>';
         }).join('') +
         '</table>';
+    }
+
+    if (layout === 'ticker') {
+      grid.style.cssText = 'padding-block:var(--space-6);display:flex;justify-content:center;';
+      grid.innerHTML =
+        '<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0;font-size:var(--text-sm);font-family:monospace;">' +
+        CREDS_DATA.map(function (c, i) {
+          var valColor = c.accent ? '#22c55e' : 'var(--color-text)';
+          var sep = i < CREDS_DATA.length - 1
+            ? '<span style="color:var(--color-border-hover);padding:0 16px;">|</span>'
+            : '';
+          return '<span style="display:inline-flex;align-items:center;gap:6px;">' +
+            '<span style="color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;font-size:var(--text-xs);">' + c.label + '</span>' +
+            '<span style="color:' + valColor + ';font-weight:700;">' + c.value + '</span>' +
+            '</span>' + sep;
+        }).join('') +
+        '</div>';
+    }
+
+    if (layout === 'cards') {
+      grid.style.cssText = 'padding-block:var(--space-8);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);max-width:800px;margin-inline:auto;';
+      grid.innerHTML = CREDS_DATA.map(function (c) {
+        var valColor = c.accent ? '#22c55e' : 'var(--color-text)';
+        return '<div style="background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-4);text-align:center;">' +
+          '<div style="font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-2);">' + c.label + '</div>' +
+          '<div style="font-family:monospace;font-size:var(--text-lg);font-weight:700;color:' + valColor + ';">' + c.value + '</div>' +
+          '</div>';
+      }).join('');
+    }
+
+    if (layout === 'active') {
+      grid.style.cssText = 'padding-block:var(--space-10);display:flex;flex-direction:column;align-items:center;gap:var(--space-6);';
+      grid.innerHTML =
+        '<div style="display:inline-flex;align-items:center;gap:var(--space-3);background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.35);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-8);">' +
+          '<div style="width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,0.6);flex-shrink:0;"></div>' +
+          '<div style="font-size:var(--text-2xl);font-weight:800;color:#22c55e;letter-spacing:-0.01em;">SAM.gov Active</div>' +
+        '</div>' +
+        '<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-6);">' +
+        CREDS_DATA.filter(function (c) { return !c.accent; }).map(function (c) {
+          return '<div style="text-align:center;">' +
+            '<div style="font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-muted);margin-bottom:var(--space-1);">' + c.label + '</div>' +
+            '<div style="font-family:monospace;font-size:var(--text-base);font-weight:700;color:var(--color-text);">' + c.value + '</div>' +
+          '</div>';
+        }).join('') +
+        '</div>';
+    }
+
+    if (layout === 'terminal') {
+      grid.style.cssText = 'padding-block:var(--space-8);display:flex;justify-content:center;';
+      grid.innerHTML =
+        '<div style="background:#080c14;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5) var(--space-8);font-family:monospace;font-size:var(--text-sm);min-width:340px;">' +
+          '<div style="color:#3a4a5e;font-size:var(--text-xs);margin-bottom:var(--space-4);letter-spacing:0.08em;"># vendor credentials</div>' +
+          CREDS_DATA.map(function (c) {
+            var valColor = c.accent ? '#22c55e' : '#e2e8f0';
+            return '<div style="display:flex;gap:var(--space-4);margin-bottom:var(--space-2);">' +
+              '<span style="color:#5a6a82;min-width:160px;">' + c.label.toLowerCase().replace(/ /g, '_') + '</span>' +
+              '<span style="color:' + valColor + ';font-weight:700;">' + c.value + '</span>' +
+            '</div>';
+          }).join('') +
+        '</div>';
     }
 
     localStorage.setItem('dtb-creds', state.credsIdx);

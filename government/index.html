@@ -583,53 +583,10 @@
                     <p style="color: var(--color-text); line-height: 1.7; font-size: var(--text-base);">Fast turnaround on small projects. Direct communication with the developer doing the work. No overhead, no layers. I specialize in quick-win automation, dashboards, and data fixes that deliver immediate value, exactly what micro-purchases are designed for.</p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: start; max-width: 1000px; margin: 0 auto;">
-
-                    <!-- Contact Form -->
-                    <div class="reveal">
-                        <form name="government-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                            <input type="hidden" name="bot-field">
-                            <input type="hidden" name="form-name" value="government-contact">
-
-                            <div class="form-group">
-                                <label class="form-label" for="name">Name</label>
-                                <input class="form-input" type="text" id="name" name="name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="email">Government Email</label>
-                                <input class="form-input" type="email" id="email" name="email" required placeholder="name@agency.gov">
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="agency">Agency / Department</label>
-                                <input class="form-input" type="text" id="agency" name="agency" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="service">Service Needed</label>
-                                <select class="form-select" id="service" name="service">
-                                    <option value="">Select a service...</option>
-                                    <option value="Data Automation & ETL">Data Automation &amp; ETL Scripts</option>
-                                    <option value="AI & ML Integrations">AI &amp; Machine Learning Integrations</option>
-                                    <option value="Predictive Modeling">Predictive Modeling &amp; ML Macros</option>
-                                    <option value="Dashboards & Analytics">Dashboards &amp; Analytics</option>
-                                    <option value="Process Optimization">Process Optimization Consulting</option>
-                                    <option value="Not sure yet">Not sure yet</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label" for="message">Requirement Description</label>
-                                <textarea class="form-textarea" id="message" name="message" required placeholder="Describe the IT requirement, timeline, and any constraints..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn--lg" style="width:100%; justify-content:center;">Submit Quote Request</button>
-                        </form>
-                    </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); align-items: start; max-width: 1000px; margin: 0 auto;">
 
                     <!-- Direct Contact & Calendly -->
-                    <div class="reveal reveal--delay-1" style="display: flex; flex-direction: column; gap: var(--space-6);">
+                    <div class="reveal reveal--delay-1" style="display: contents;">
                         <div class="card">
                             <div class="card__icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">

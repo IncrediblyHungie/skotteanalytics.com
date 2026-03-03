@@ -10,17 +10,28 @@
 
   /* ─── ACCENT COLORS ──────────────────────────────────────── */
   var ACCENTS = [
-    { name: 'Green',  accent: '#06d6a0', dim: '#05b888', glow: 'rgba(6,214,160,0.15)'   },
-    { name: 'Blue',   accent: '#3b82f6', dim: '#2563eb', glow: 'rgba(59,130,246,0.15)'  },
-    { name: 'Amber',  accent: '#f59e0b', dim: '#d97706', glow: 'rgba(245,158,11,0.15)'  },
-    { name: 'Coral',  accent: '#f97316', dim: '#ea580c', glow: 'rgba(249,115,22,0.15)'  },
+    { name: 'Green',       accent: '#06d6a0', dim: '#05b888', glow: 'rgba(6,214,160,0.15)'    },
+    { name: 'Mint',        accent: '#34d399', dim: '#10b981', glow: 'rgba(52,211,153,0.15)'   },
+    { name: 'Cyan',        accent: '#22d3ee', dim: '#06b6d4', glow: 'rgba(34,211,238,0.15)'   },
+    { name: 'Sky',         accent: '#38bdf8', dim: '#0ea5e9', glow: 'rgba(56,189,248,0.15)'   },
+    { name: 'Blue',        accent: '#3b82f6', dim: '#2563eb', glow: 'rgba(59,130,246,0.15)'   },
+    { name: 'Indigo',      accent: '#818cf8', dim: '#6366f1', glow: 'rgba(129,140,248,0.15)'  },
+    { name: 'Violet',      accent: '#a78bfa', dim: '#8b5cf6', glow: 'rgba(167,139,250,0.15)'  },
+    { name: 'Amber',       accent: '#f59e0b', dim: '#d97706', glow: 'rgba(245,158,11,0.15)'   },
+    { name: 'Coral',       accent: '#f97316', dim: '#ea580c', glow: 'rgba(249,115,22,0.15)'   },
+    { name: 'Rose',        accent: '#fb7185', dim: '#f43f5e', glow: 'rgba(251,113,133,0.15)'  },
+    { name: 'Gold',        accent: '#fbbf24', dim: '#f59e0b', glow: 'rgba(251,191,36,0.15)'   },
+    { name: 'White',       accent: '#e2e8f0', dim: '#cbd5e1', glow: 'rgba(226,232,240,0.10)'  },
   ];
 
   /* ─── HERO TITLE SIZE ─────────────────────────────────────── */
   var HERO_SIZES = [
+    { name: 'XS',      size: 'clamp(1.5rem, 3vw, 2.25rem)',  weight: '600', tracking: '-0.01em' },
     { name: 'Tight',   size: 'clamp(1.875rem, 4vw, 3rem)',   weight: '700', tracking: '-0.02em' },
     { name: 'Current', size: 'clamp(2.25rem, 5vw, 3.75rem)', weight: '800', tracking: '-0.03em' },
     { name: 'Bold XL', size: 'clamp(2.5rem, 6vw, 4.5rem)',   weight: '800', tracking: '-0.04em' },
+    { name: 'Display', size: 'clamp(3rem, 7vw, 5.5rem)',     weight: '800', tracking: '-0.05em' },
+    { name: 'Poster',  size: 'clamp(3.5rem, 9vw, 7rem)',     weight: '800', tracking: '-0.06em' },
   ];
 
   /* ─── HERO BADGE STYLE ────────────────────────────────────── */

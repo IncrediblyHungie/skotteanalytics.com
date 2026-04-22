@@ -58,7 +58,7 @@ def get_head_html(title, description, canonical_url, depth, json_ld="", og_type=
     <link rel="icon" type="image/x-icon" href="{p}assets/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Skotte Analytics Blog" href="/feed.xml">
 
-    <!-- Fonts — Editorial: Fraunces + IBM Plex Sans/Mono -->
+    <!-- Fonts, Editorial: Fraunces + IBM Plex Sans/Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -282,7 +282,7 @@ def get_service_use_case_key(service_slug):
 def generate_industry_overview(industry, services, depth=2):
     slug = industry["slug"]
     display = industry["display_name"]
-    title = f"{display} — AI & Automation | Skotte Analytics"
+    title = f"{display}, AI & Automation | Skotte Analytics"
     desc = industry["description"][:160]
     canonical = f"{SITE_URL}/industries/{slug}/"
     p = prefix(depth)
@@ -394,7 +394,7 @@ def generate_industry_service(industry, service, depth=2):
     svc_slug = service["slug"]
     ind_display = industry["display_name"]
     svc_name = service["name"]
-    title = f"{svc_name} for {ind_display} — Skotte Analytics"
+    title = f"{svc_name} for {ind_display}, Skotte Analytics"
     tagline = service["tagline_template"].format(industry=industry["name"].lower())
     use_key = get_service_use_case_key(svc_slug)
     use_cases = industry.get(use_key, [])
@@ -537,7 +537,7 @@ def generate_industry_service(industry, service, depth=2):
 
 def generate_blog_post(post, services, industries, depth=1):
     slug = post["slug"]
-    title = f"{post['title']} — Skotte Analytics"
+    title = f"{post['title']}, Skotte Analytics"
     desc = post["meta_description"]
     canonical = f"{SITE_URL}/blog/{slug}.html"
     p = prefix(depth)
@@ -729,11 +729,11 @@ def update_blog_index(posts, depth=1):
             "date": "February 16, 2026",
             "title": "What Does an AI Consultant Actually Do?",
             "href": "what-does-an-ai-consultant-do.html",
-            "desc": "AI consultant sounds vague. Here's what it actually means — from discovery to deployment — and when your business is ready to hire one.",
+            "desc": "AI consultant sounds vague. Here's what it actually means, from discovery to deployment, and when your business is ready to hire one.",
         },
     ]
 
-    title = "Blog — Skotte Analytics"
+    title = "Blog, Skotte Analytics"
     description = "AI, automation, and analytics insights for small business owners. Practical advice on implementing technology to save time and grow revenue."
     canonical = f"{SITE_URL}/blog/"
 

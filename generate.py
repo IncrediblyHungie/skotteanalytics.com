@@ -58,10 +58,10 @@ def get_head_html(title, description, canonical_url, depth, json_ld="", og_type=
     <link rel="icon" type="image/x-icon" href="{p}assets/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Skotte Analytics Blog" href="/feed.xml">
 
-    <!-- Fonts -->
+    <!-- Fonts — Editorial: Fraunces + IBM Plex Sans/Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,0..100;1,9..144,400..700,0..100&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{p}css/styles.css" rel="stylesheet">{ld_block}
@@ -73,6 +73,14 @@ def get_head_html(title, description, canonical_url, depth, json_ld="", og_type=
       function gtag(){{dataLayer.push(arguments);}}
       gtag('js', new Date());
       gtag('config', 'G-9GLHECY1Z8');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){{
+            c[a]=c[a]||function(){{(c[a].q=c[a].q||[]).push(arguments)}};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        }})(window, document, "clarity", "script", "vpvjv6uqb3");
     </script>
 </head>
 <body>"""
@@ -173,7 +181,7 @@ def get_footer_html(depth):
             <div class="site-footer__top">
                 <div>
                     <div class="site-footer__brand">Skotte<span>.</span></div>
-                    <p class="site-footer__tagline">AI and automation consulting for growing businesses.</p>
+                    <p class="site-footer__tagline">Federal IT contractor &amp; subcontractor. AI and automation for agencies that need it shipped.</p>
                 </div>
                 <nav class="site-footer__nav" aria-label="Footer navigation">
                     <a href="{p}index.html" class="site-footer__link">Home</a>
